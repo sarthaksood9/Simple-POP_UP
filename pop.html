@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylepop.css">
+</head>
+
+<body>
+
+    <h2>Modal Form</h2>
+
+    <div id="popup-form" class="modal">
+
+        <form class="modal-content animate" action="" >
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('popup-form').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="https://www.pinclipart.com/picdir/big/565-5657886_avatar-images-for-login-form-clipart.png"
+                    alt="Avatar" class="avatar">
+            </div>
+            <div class="container-m">
+                <div class="container">
+                    <div class="info-input">
+                        <label for="uname"><b>USERNAME</b></label>
+                        <br>
+                        <input id="user-name" type="text" placeholder="Enter Username" name="uname" value="" required>
+                        <br>
+                        <label for="psw"><b>PASSWORD</b></label>
+                        <br>
+                        <input type="password" placeholder="Enter Password" name="psw">
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        <div class="btndiv">
+                            <button type="submit" id="button1" class="open-btn" onclick="testjs()"><B>Login</B></button>
+                            <div style="border-left:1px solid wheat ;"></div>
+                            <button type="submit" id="button2" style="margin-right: 7%;"><B>Sign-up</B></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup">
+                    <div class="popup-overlay"></div>
+                    <div class="main-popup">
+                        <div class="popup-content">
+                            <span class="close-btn">&times;</span>
+                            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+                            <lord-icon src="https://cdn.lordicon.com/kdruzgxz.json" trigger="loop"
+                                colors="primary:#121331,secondary:#08a88a" style="width:250px;height:250px;margin-left: -40px;">
+                            </lord-icon>
+                            <p>Welcome Back !!</p>
+                            <p id="user-s"></p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <script src="popup-slide.js"></script>
+                <script>
+                    function testjs(){
+                    var b = document.getElementById('user-name').value
+                    document.getElementById('user-s').innerHTML = b;
+
+                    }
+                </script>
+                
+
+
+            </div>
+
+            <!-- <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('popup-form').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div> -->
+        </form>
+    </div>
+    <?php if(a == b) { ?>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('popup-form').style.display = 'block';
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <?php } ?>
+
+</body>
+
+</html>
